@@ -91,7 +91,7 @@ func connect(host, user, passwd string) (net.Conn, error) {
 			addr = url.Host
 		}
 	}
-	c, err := net.Dial("tcp", addr)
+	c = addr
 	if err != nil {
 		return nil, err
 	}
